@@ -14,6 +14,16 @@ touch README.md
 touch analysis/main.py
 
 # download client data
+
+required_commands="unzip wget"
+
+for cmd in $required_commands; do
+    if ! command -v "$cmd" &> /dev/null; then
+        echo "$cmd could not be found. Please install it to proceed."
+        exit 1
+    fi
+done
+
 wget -O rawdata.zip https://github.com/UofT-DSI/shell/raw/refs/heads/main/02_activities/assignments/rawdata.zip
 unzip rawdata.zip
 
