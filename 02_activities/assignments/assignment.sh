@@ -61,7 +61,6 @@ rm -f data/processed/user_logs/*ipaddr*
 
 tree data/processed -f > data/inventory.txt
 
-
 ###########################################
 
 echo "Project setup is complete!"
